@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\icon-reset.png",
+      "PackagePath": "staticwebassets\\icon-reset.png"
+    },
+    {
+      "Id": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ContactsBook.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ContactsBook.props",
+      "PackagePath": "build\\ContactsBook.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ContactsBook.props",
+      "PackagePath": "buildMultiTargeting\\ContactsBook.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ContactsBook.props",
+      "PackagePath": "buildTransitive\\ContactsBook.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

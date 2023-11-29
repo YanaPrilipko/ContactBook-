@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "9anhZ5Bq0NqcybmHZpbfT/CZ3MEDmrM2d//8iZbsAxg=",
+  "Source": "ContactsBook",
+  "BasePath": "_content/ContactsBook",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ContactsBook\\wwwroot",
+      "Source": "ContactsBook",
+      "ContentRoot": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\",
+      "BasePath": "_content/ContactsBook",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\icon-reset.png",
+      "SourceId": "ContactsBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\",
+      "BasePath": "_content/ContactsBook",
+      "RelativePath": "icon-reset.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icon-reset.png"
+    },
+    {
+      "Identity": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\index.html",
+      "SourceId": "ContactsBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Рoзробка С#\\ContactsBook\\ContactsBook\\ContactsBook\\wwwroot\\",
+      "BasePath": "_content/ContactsBook",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

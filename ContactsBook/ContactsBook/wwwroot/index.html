@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Book</title>
+    <style>
+        body {
+            font-size: 150%;
+        }
+
+        .contact-input {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .contact-input > input {
+                padding: 5px;
+                border: 1px solid darkgray;
+                border-radius: 5px;
+                font-size: 150%;
+            }
+
+            .contact-input > label {
+                margin-top: 20px;
+            }
+    </style>
+    <script>
+
+        async function fetchContacts() {
+            const response = await fetch("/contacts", { method: "GET" });
+            const allContacts = await response.json();
+            const contactsDiv = document.getElementById("contacts");
+
+            for (const contact of allContacts) {
+                contactsDiv.appendChild(createContactElement(contact));
+            }
+        }
+
+        function createContactElement(contact) {
+            const div = document.createElement("div");
+            div.innerHTML = `
+                         ${contact.first_name}, ${contact.last_name}, ${contact.phone}, ${contact.birthdate}, ${contact.email}
+                            ${contact.photoPath ? `<img src="${contact.photoPath}" alt="Contact Photo" style="max-width: 100px; max-height: 100px;" />` : ''}
+                    `;
+            return div;
+        }
+
+        document.addEventListener("DOMContentLoaded", fetchContacts);
+
+    </script>
+</head>
+<body>
+    <h1>Hello to my contact book!</h1>
+
+    <div id="contacts"></div>
+
+
+    <form method="post" action="/contacts" class="contact-input" enctype="multipart/form-data">
+        <div style="font-style: italic">
+            Please, leave here your contacts so I'd call you later...
+        </div>
+
+        <label for="first_name">First Name:</label>
+        <input type="text"
+               id="first_name"
+               name="first_name"
+               required
+               placeholder="first name" />
+
+        <label for="last_name">Last Name:</label>
+        <input type="text"
+               id="last_name"
+               name="last_name"
+               required
+               placeholder="last name" />
+
+        <!-- 0 (99) 123-34-56 -->
+        <label for="phone">Phone:</label>
+        <input type="tel"
+               id="phone"
+               name="phone"
+               required
+               placeholder="0998765432"
+               pattern="0\d{9}"
+               minlength="10"
+               maxlength="10" />
+
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate" name="birthdate" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+
+        <div style="
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          justify-content: space-evenly;
+          margin-top: 20px;
+        ">
+            <button type="submit">Add Contact</button>
+            <button type="reset">
+                <img src="./icon-reset.png" width="24" height="24" />
+                Reset All
+            </button>
+        </div>
+    </form>
+
+</body>
+</html>
